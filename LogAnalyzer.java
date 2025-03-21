@@ -27,6 +27,12 @@
  * The size should be assigned when creating the array using new.
  * Correct version: boolean [] occupied = new boolean[5000];
  * 
+ * Question 7
+ * 20 string objects
+ * 
+ * Question 8
+ * The 50 is in parantheses its supposed to be in brackets.
+ * 
  */
 public class LogAnalyzer
 {
@@ -34,11 +40,28 @@ public class LogAnalyzer
     private int[] hourCounts;
     // Use a LogfileReader to access the data.
     private LogfileReader reader;
-    //Q3
+    
+    //Question 3
     private boolean[] vacant;
-    //Q5
+    
+    //Question 5
     int [] counts;
-    boolean [] occupied = new boolean[5000];
+    boolean [] occupied;
+    
+    //Question 6
+    //6a
+    double[] readings;
+    //6b
+    String[] urls;
+    //6c
+    //TicketMachine[] machines; 
+    
+    //Question 8
+    // Correct version
+    double [] prices;
+    
+    
+    
    
 
     /**
@@ -51,6 +74,23 @@ public class LogAnalyzer
         hourCounts = new int[24];
         // Create the reader to obtain the data.
         reader = new LogfileReader();
+        
+        //Question 5
+        occupied = new boolean[5000];
+        
+        //Question 6
+        //6a
+        readings = new double[60];
+        //6b
+        urls = new String[90];
+        //6c
+        //machines = new TicketMachine[5];
+        
+        //Question 8
+        //Correct version
+        prices = new double [50];
+        
+        
     }
 
     /**
