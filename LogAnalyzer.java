@@ -37,6 +37,11 @@
  * Hours in a day are 0 to 23. The loop using <= tries to access hour 24,
  * which doesn't exist. We should use <.
  * 
+ * Question 11
+ * Incorrect parameter types it was written double instead of double[])
+ * Missing type of index declaration
+ * Incorrect loop condititon it was written <= instead of <
+ * 
  */
 public class LogAnalyzer
 {
@@ -135,5 +140,17 @@ public class LogAnalyzer
     public void printData()
     {
         reader.printData();
+        //Question 11
+        double[] marks = {2.3,3.3,5.8,1.0,0.8};
+        printGreater(marks,2.0);
+    }
+    
+    //Question 11
+    public void printGreater(double [] marks, double mean){
+        for(int index = 0; index < marks.length;index++){
+            if(marks[index]>mean){
+                System.out.println(marks[index]);
+            }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+        }
     }
 }
