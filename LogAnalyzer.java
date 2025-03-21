@@ -155,4 +155,12 @@ public class LogAnalyzer
             }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
         }
     }
+    
+    public int numberOfAccesses(){
+        int total = 0;
+        for(int count : hourCounts){
+            total += count;
+        }
+        return total;
+    }
 }
