@@ -14,6 +14,18 @@
  * Question 2
  * private Person[] people;
  * 
+ * Question 4
+ * The hourCounts variable is used in the fields section, in the constructor
+ * and in the first two methods. The square brackets is used very often.
+ * 
+ * Question 5
+ * 1. []int counts;
+ * The brackets should come after the type not before the type
+ * The correct version: int [] counts;
+ * 2. boolean[5000] occupied;
+ * You cannot specify the size of an array when declaring it
+ * The size should be assigned when creating the array using new.
+ * Correct version: boolean [] occupied = new boolean[5000];
  * 
  */
 public class LogAnalyzer
@@ -22,7 +34,12 @@ public class LogAnalyzer
     private int[] hourCounts;
     // Use a LogfileReader to access the data.
     private LogfileReader reader;
+    //Q3
     private boolean[] vacant;
+    //Q5
+    int [] counts;
+    boolean [] occupied = new boolean[5000];
+   
 
     /**
      * Create an object to analyze hourly web accesses.
