@@ -33,6 +33,10 @@
  * Question 8
  * The 50 is in parantheses its supposed to be in brackets.
  * 
+ * Question 9
+ * Hours in a day are 0 to 23. The loop using <= tries to access hour 24,
+ * which doesn't exist. We should use <.
+ * 
  */
 public class LogAnalyzer
 {
@@ -113,8 +117,15 @@ public class LogAnalyzer
     public void printHourlyCounts()
     {
         System.out.println("Hr: Count");
-        for(int hour = 0; hour < hourCounts.length; hour++) {
-            System.out.println(hour + ": " + hourCounts[hour]);
+        //for(int hour = 0; hour < hourCounts.length; hour++) {
+        //System.out.println(hour + ": " + hourCounts[hour]);
+        //}
+        
+        //Question 10
+        int hour = 0;
+        while(hour < hourCounts.length){
+            System.out.println(hour +":"+ hourCounts[hour]);
+            hour++;
         }
     }
     
