@@ -4,12 +4,25 @@
  * @author David J. Barnes and Michael Kölling.
  * @version    2016.02.29
  */
+
+/*
+ * Lab 7 part 1 answers
+ * 
+ * Question 1
+ * The busiest time of the day is at 18:00
+ * 
+ * Question 2
+ * private Person[] people;
+ * 
+ * 
+ */
 public class LogAnalyzer
 {
     // Where to calculate the hourly access counts.
     private int[] hourCounts;
     // Use a LogfileReader to access the data.
     private LogfileReader reader;
+    private boolean[] vacant;
 
     /**
      * Create an object to analyze hourly web accesses.
