@@ -45,6 +45,10 @@
  * Question 14
  * Yes the method works it gives the total.
  * 
+ * Question 17
+ * When multiple hours have the same count, the busiestHour method will 
+ * return the first hour it encounters with the maximum count. 
+ * 
  * 
  * 
  */
@@ -193,5 +197,19 @@ public class LogAnalyzer
             }
         }
         return quietestHour;
+    }
+    
+    //Question 18
+    public int busiestTwoHourPeriod(){
+        int busiestHour = 0;
+        int maxCount = hourCounts[0] + hourCounts[1];
+        for(int hour = 1; hour < hourCounts.length -1; hour++){
+            int count = hourCounts[hour] + hourCounts[hour + 1];
+            if (count > maxCount){
+                maxCount = count;
+                busiestHour = hour;
+            }
+        }
+        return busiestHour;
     }
 }
