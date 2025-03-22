@@ -181,4 +181,17 @@ public class LogAnalyzer
         }
         return busiestHour;
     }
+    
+    //Question 16
+    public int quietestHour(){
+        int quietestHour= 0;
+        int minCount= hourCounts[0];
+        for(int hour = 1; hour < hourCounts.length; hour++){
+            if(hourCounts[hour] < minCount){
+                minCount = hourCounts[hour];
+                quietestHour = hour;
+            }
+        }
+        return quietestHour;
+    }
 }
