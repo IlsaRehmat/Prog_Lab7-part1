@@ -42,6 +42,11 @@
  * Missing type of index declaration
  * Incorrect loop condititon it was written <= instead of <
  * 
+ * Question 14
+ * Yes the method works it gives the total.
+ * 
+ * 
+ * 
  */
 public class LogAnalyzer
 {
@@ -162,5 +167,18 @@ public class LogAnalyzer
             total += count;
         }
         return total;
+    }
+    
+    //Question 15
+    public int busiestHour(){
+        int busiestHour= 0;
+        int maxCount= hourCounts[0];
+        for(int hour = 1; hour < hourCounts.length; hour++){
+            if(hourCounts[hour] > maxCount){
+                maxCount = hourCounts[hour];
+                busiestHour = hour;
+            }
+        }
+        return busiestHour;
     }
 }
